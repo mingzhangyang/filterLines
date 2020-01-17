@@ -151,9 +151,9 @@ func printHelpInfo() {
 	fmt.Println("\tfilterLine -h\t\tprint help info")
 	fmt.Println("\tfilterLine --help\t\tprint help info")
 	fmt.Println("\tfilterLine file1 file2\t\tprint rows in file2 that contain a pattern in file1")
-	fmt.Println("\tfilterLine -[options] file1 file2\t\tsee below for options")
+	fmt.Println("\tfilterLine [options] file1 file2\t\tsee below for options")
 	fmt.Println("\nOptions:")
 	fmt.Println("\t-r: keep the rows in file2 that are not found in file1")
 	fmt.Println("\t-d: specify the delimiter in file2, default: \"\\t\"")
-	fmt.Println("\t-n: specify the field in rows in file2 to compare with patterns in file1, starts from 1, defalut: 1 ")
+	fmt.Println("\t-f: specify the field in rows in file2 to compare with patterns in file1, starts from 1, defalut: 1 ")
 }
