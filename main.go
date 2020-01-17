@@ -148,9 +148,9 @@ func setArgument(opts map[string]string, v [2]string) error {
 func printHelpInfo() {
 	fmt.Println("A utility to filter file2 with the patterns (row as pattern) in file1. Similar to \"grep -f file1 file2\"")
 	fmt.Println("\nUsage:")
-	fmt.Println("\tfilterLine -h\t\tprint help info")
-	fmt.Println("\tfilterLine --help\t\tprint help info")
-	fmt.Println("\tfilterLine file1 file2\t\tprint rows in file2 that contain a pattern in file1")
+	fmt.Println("\tfilterLine -h\t\t\t\t\tprint help info")
+	fmt.Println("\tfilterLine --help\t\t\t\tprint help info")
+	fmt.Println("\tfilterLine file1 file2\t\t\t\tprint rows in file2 that contain a pattern in file1")
 	fmt.Println("\tfilterLine [options] file1 file2\t\tsee below for options")
 	fmt.Println("\nOptions:")
 	fmt.Println("\t-r: keep the rows in file2 that are not found in file1")
