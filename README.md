@@ -14,3 +14,4 @@ How to use the utility
 - `./filterLines -r file1 file2`, do the similar work to above. But it will keep the lines in file2 that don't match to the patterns in file1; matched will be ignored.
 - `./filterLines -f 3 file1 file2`, specify that the third field in each line of file2 will be used to match patterns
 - `./filterLines -d "," file1 file2`, specify that `,` should be used to split lines of file2
+- `-r`, `-f`, `-d` can be used together.
