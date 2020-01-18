@@ -18,7 +18,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(targets, options)
+	// fmt.Println(targets, options)
 	filter(targets[0], targets[1], options)
 }
 
