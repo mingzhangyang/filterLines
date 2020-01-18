@@ -3,27 +3,22 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
 )
 
+var targets []string = make([]string, 0, 16)
+
+var options = map[string]string{
+	"-f": "1",
+	"-d": "\t",
+	"-r": "off",
+}
+
 func main() {
-	switch len(os.Args) {
-	case 1:
-		log.Fatal("no arguments found")
-	case 2:
-		if os.Args[1] == "-h" || os.Args[1] == "--help" {
-			printHelpInfo()
-			return
-		}
-		log.Fatal("bad argument")
-	default:
-		err := collectArguments()
-		if err != nil {
-			log.Fatal(err)
-		}
-		// fmt.Println(targets, options)
+	err := collectArguments()
+	if err != nil {
+		log.Fatal(err)
 	}
-	
+	fmt.Println(targets, options)
 	filter(targets[0], targets[1], options)
 }
 

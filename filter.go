@@ -38,14 +38,14 @@ func filter(fp1, fp2 string, opts map[string]string) {
 	outBuf := bufio.NewWriter(os.Stdout)
 	faScanner := bufio.NewScanner(fa)
 
-	d := opts["delimiter"]
-	n, err := strconv.Atoi(opts["field"])
+	d := opts["-d"]
+	n, err := strconv.Atoi(opts["-f"])
 	if err != nil {
 		log.Fatal("invalid argument for -f")
 	}
 	n = n - 1
 	
-	if opts["reverse"] == "false" {
+	if opts["-r"] == "off" {
 		for faScanner.Scan() {
 			if m[strings.Split(faScanner.Text(), d)[n]] {
 				_, _ = outBuf.Write(faScanner.Bytes())

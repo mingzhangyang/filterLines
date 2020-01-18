@@ -5,20 +5,18 @@ import (
 	"errors"
 )
 
-var targets []string = make([]string, 0, 16)
-
-var options = map[string]string{
-	"-f": "1",
-	"-d": "\t",
-	"-r": "off",
-}
-
 func collectArguments() error {
 	arr := os.Args[1:]
 	n := len(arr)
 	switch {
-	case n < 2:
-		return errors.New("missing arguments")
+	case n == 0:
+		return errors.New("no arguments provide, run with -h for help")
+	case n == 1:
+		if arr[0] == "-h" || arr[0] == "--help" {
+			printHelpInfo()
+			os.Exit(0)
+		}
+		return errors.New("bad argument")
 	case n > 7:
 		return errors.New("too many arguments")
 	default:
