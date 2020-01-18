@@ -10,7 +10,7 @@ func collectArguments() error {
 	n := len(arr)
 	switch {
 	case n == 0:
-		return errors.New("no arguments provide, run with -h for help")
+		return errors.New("no arguments provided, run with -h for help")
 	case n == 1:
 		if arr[0] == "-h" || arr[0] == "--help" {
 			printHelpInfo()
