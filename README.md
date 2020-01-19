@@ -1,13 +1,13 @@
 # filterLines
 A utility to do the similar job "grep -f file1 file2"
 
-Build
+### Build
 
 - git clone to download the repo
 - cd to the directory
 - run `go build -o filterLines main.go filter.go`
 
-How to use the utility
+### How to use the utility
 
 - `./filterLines -h` to see the help info
 - `./filterLines file1 file2` to filter file2 using lines in file1. By default, each line in file1 is taken as pattern; each line in the file2 will be split by `\t`, the first field is used to check whether matches patterns; if matched then keep this line, otherwise ignore this line.
